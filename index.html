@@ -1,0 +1,72 @@
+<!DOCTYPE HTML>
+<!--
+	Industrious by TEMPLATED
+	templated.co @templatedco
+	Released for free under the Creative Commons Attribution 3.0 license (templated.co/license)
+-->
+<html>
+	<head>
+		<title>QUIZ</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<meta name="description" content="" />
+		<meta name="keywords" content="" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<meta name="google-signin-client_id" content="402709447437-d48kn23ke9cnrvguj6ikq6amsa5urk4j.apps.googleusercontent.com">
+	</head>
+	<script src="https://apis.google.com/js/platform.js" async defer></script>
+	<body class="is-preload">
+		<!-- Header -->
+			<header id="header">
+				<div class="inner-head">
+					<div class="w-img ush_image_1 at_left">
+						<a class="logo w-img-h" href="index.html"><img class="for_default" src="images/logo-tatvic.png" width="1024" height="310" alt="Tatvic logo"></a>
+					</div>
+					<div class="at_right">
+						<a href="#menu" class="navPanelToggle"><span class="fa fa-bars"></span></a>
+					</div>
+				</div>
+			</header>
+		<!-- Banner -->
+		<!-- Highlights -->
+			<section class="wrapper">
+				<div class="inner">
+					<header class="special">
+						<div class="title">
+							
+							<img class="for_default" src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/75f33940-23e0-40c7-81dc-90d6d4ee65ca/d85wf6n-2d267731-2771-420b-ba39-f9413f3ef2b1.png/v1/fill/w_900,h_458,strp/quick_quiz_logo_by_ericknupp_d85wf6n-fullview.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcLzc1ZjMzOTQwLTIzZTAtNDBjNy04MWRjLTkwZDZkNGVlNjVjYVwvZDg1d2Y2bi0yZDI2NzczMS0yNzcxLTQyMGItYmEzOS1mOTQxM2YzZWYyYjEucG5nIiwiaGVpZ2h0IjoiPD00NTgiLCJ3aWR0aCI6Ijw9OTAwIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmltYWdlLndhdGVybWFyayJdLCJ3bWsiOnsicGF0aCI6Ilwvd21cLzc1ZjMzOTQwLTIzZTAtNDBjNy04MWRjLTkwZDZkNGVlNjVjYVwvZXJpY2tudXBwLTQucG5nIiwib3BhY2l0eSI6OTUsInByb3BvcnRpb25zIjowLjQ1LCJncmF2aXR5IjoiY2VudGVyIn19.yJeasGg2dKikZ2fm5T5hkbuQ-Y9hX7Wf5HpbbLbqnFQ" width="300" height="150" alt="email logo">
+						</div>
+						</br>
+						<div class="title">
+							<h3>Login</h3>
+						</div>	
+						<ul class="buttons">
+							<li style="padding-right: 10px">
+								<div class="loginButton">
+    								<div class="g-signin2" data-onsuccess="onSignIn"></div>
+								</div>
+							</li>
+						</ul>   
+					</header>
+				</div>
+			</section>
+<script type="text/javascript">
+	function onSignIn(googleUser) {
+		if(window.location.search!=''){
+			var auth2 = gapi.auth2.getAuthInstance();
+			auth2.signOut().then(function () {
+      			console.log('User signed out.');
+      			let temp = window.location.href.split('/')
+    			temp[temp.length-1] = 'index.html'
+    			window.location.href = temp.join('/')
+    		});
+			return
+		}
+            document.cookie = "idtoken="+googleUser.getAuthResponse().id_token;+"; path=/";
+            let temp = window.location.href.split('/')
+    		temp[temp.length-1] = 'quiz.html'
+    		window.location.href = temp.join('/')
+    }
+</script>	
+	</body>
+</html>
